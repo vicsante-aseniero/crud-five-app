@@ -1,0 +1,187 @@
+{
+  // For more information, visit: https://go.microsoft.com/fwlink/?LinkId=733558
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "build api",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "build",
+            "${workspaceFolder}/api/crud-api.csproj",
+            "/property:GenerateFullPaths=true",
+            "/consoleloggerparameters:NoSummary;ForceNoAlign"
+        ],
+        "problemMatcher": "$msCompile",
+        "options": {
+            "cwd": "${workspaceFolder}/api",
+            "webroot": "${workspaceFolder}/api",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/api/Views"
+            }
+        }
+    },
+    {
+        "label": "publish api",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "publish",
+            "${workspaceFolder}/api/crud-api.csproj",
+            "/property:GenerateFullPaths=true",
+            "/consoleloggerparameters:NoSummary;ForceNoAlign"
+        ],
+        "problemMatcher": "$msCompile",
+        "options": {
+            "cwd": "${workspaceFolder}/api",
+            "webroot": "${workspaceFolder}/api",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/api/Views"
+            }
+        }
+    },
+    {
+        "label": "test api",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "test",
+            "${workspaceFolder}/api/crud-api.csproj",
+            "--no-build",
+            "--verbosity:normal"
+        ],
+        "problemMatcher": "$msCompile",
+        "options": {
+            "cwd": "${workspaceFolder}/api",
+            "webroot": "${workspaceFolder}/api",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/api/Views"
+            }
+        }
+    },
+    {
+        "label": "watch api",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "watch",
+            "run",
+            "--project",
+            "${workspaceFolder}/api/crud-api.csproj"
+        ],
+        "problemMatcher": "$msCompile",
+        "options": {
+            "cwd": "${workspaceFolder}/api",
+            "webroot": "${workspaceFolder}/api",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/api/Views"
+            }
+        }
+    },
+    {
+        "label": "build grpc",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "build",
+            "${workspaceFolder}/grpc/crud-grpc.csproj",
+            "/property:GenerateFullPaths=true",
+            "/consoleloggerparameters:NoSummary;ForceNoAlign"
+        ],
+        "problemMatcher": "$msCompile",
+        "options": {
+            "cwd": "${workspaceFolder}/grpc",
+            "webroot": "${workspaceFolder}/grpc",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/grpc/Views"
+            }
+        }
+    },
+    {
+        "label": "publish grpc",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "publish",
+            "${workspaceFolder}/grpc/crud-grpc.csproj",
+            "/property:GenerateFullPaths=true",
+            "/consoleloggerparameters:NoSummary;ForceNoAlign"
+        ],
+        "problemMatcher": "$msCompile",
+        "options": {
+            "cwd": "${workspaceFolder}/grpc",
+            "webroot": "${workspaceFolder}/grpc",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/grpc/Views"
+            }
+        }
+    },
+    {
+        "label": "test grpc",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "test",
+            "${workspaceFolder}/grpc/crud-grpc.csproj",
+            "--no-build",
+            "--verbosity:normal"
+        ],
+        "problemMatcher": "$msCompile",
+        "options": {
+            "cwd": "${workspaceFolder}/grpc",
+            "webroot": "${workspaceFolder}/grpc",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/grpc/Views"
+            }
+        }
+    },
+    {
+        "label": "watch grpc",
+        "command": "dotnet",
+        "type": "process",
+        "args": [
+            "watch",
+            "run",
+            "--project",
+            "${workspaceFolder}/grpc/crud-grpc.csproj"
+        ],
+        "problemMatcher": "$msCompile",
+        "options": {
+            "cwd": "${workspaceFolder}/grpc",
+            "webroot": "${workspaceFolder}/grpc",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/grpc/Views"
+            }
+        }
+    },
+    {
+        "label": "echo workspaceFolder",
+        "type": "shell",
+        "command": "echo ${workspaceFolder}"
+    }
+  ]
+}
