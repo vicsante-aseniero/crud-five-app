@@ -1,0 +1,154 @@
+# Created by https://www.toptal.com/developers/gitignore/api/dotnet,csharp,nextjs,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=dotnet,csharp,nextjs,visualstudiocode
+
+#################
+# For Dotnet API
+#################
+# Build output
+api/[Bb]in/
+api/[Oo]bj/
+
+# Visual Studio files
+api/.vs/
+api/*.suo
+api/*.user
+api/*.log
+api/*.pdb
+api/*.opendb
+api/*.tlog
+api/*.trx
+api/*.bak
+api/*.cache
+api/*.scc
+api/*.vssscc
+api/*.vsscc
+api/*.vspscc
+api/*.vsp
+api/*.code-workspace
+api/*.sln.docstates
+*.sln.docstates
+
+# NuGet packages
+api/packages/
+api/*.nupkg
+api/.nuget/
+api/!packages/build/
+api/!packages/repositories.config
+
+# Rider files
+api/.idea/
+api/*.iml
+
+# ReSharper files
+api/_ReSharper*/
+api/*.DotSettings.user
+
+# Other common files
+api/Thumbs.db
+api/Desktop.ini
+api/.DS_Store
+
+##################
+# For Dotnet gRPC
+##################
+# Build output
+grpc/[Bb]in/
+grpc/[Oo]bj/
+
+# Visual Studio files
+grpc/.vs/
+grpc/*.suo
+grpc/*.user
+grpc/*.log
+grpc/*.pdb
+grpc/*.opendb
+grpc/*.tlog
+grpc/*.trx
+grpc/*.bak
+grpc/*.cache
+grpc/*.scc
+grpc/*.vssscc
+grpc/*.vsscc
+grpc/*.vspscc
+grpc/*.vsp
+grpc/*.code-workspace
+grpc/*.sln.docstates
+*.sln.docstates
+
+# NuGet packages
+grpc/packages/
+grpc/*.nupkg
+grpc/.nuget/
+grpc/!packages/build/
+grpc/!packages/repositories.config
+
+# Rider files
+grpc/.idea/
+grpc/*.iml
+
+# ReSharper files
+grpc/_ReSharper*/
+grpc/*.DotSettings.user
+
+# Other common files
+grpc/Thumbs.db
+grpc/Desktop.ini
+grpc/.DS_Store
+
+### NextJS ###
+# dependencies
+ui/node_modules
+ui/.pnp
+ui/.pnp.js
+
+# testing
+ui/coverage
+
+# next.js
+ui/.next/
+ui/out/
+
+# production
+ui/build
+
+# misc
+ui/.DS_Store
+ui/*.pem
+
+# debug
+ui/npm-debug.log*
+ui/yarn-debug.log*
+ui/yarn-error.log*
+ui/.pnpm-debug.log*
+
+# local env files
+ui/.env*.local
+
+# vercel
+ui/.vercel
+
+# typescript
+ui/*.tsbuildinfo
+ui/next-env.d.ts
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/dotnet,csharp,nextjs,visualstudiocode
