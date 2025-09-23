@@ -13,20 +13,25 @@ services:
     command: sleep infinity
 
     # Runs app on the same network as the database container, allows "forwardPorts" in devcontainer.json function.
-    network_mode: service:db
+    networks: 
+      - keycloak-dbs-brokers_backend_network
 
     # Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-    # user: root
+    user: root
 
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
-  db:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    restart: unless-stopped
-    environment:
-      SA_PASSWORD: P@ssw0rd
-      ACCEPT_EULA: Y
-
-    # Add "forwardPorts": ["db:1433"] to **devcontainer.json** to forward MSSQL locally.
-    # (Adding the "ports" property to this file will not forward from a Codespace.)
+networks:
+  keycloak-dbs-brokers_backend_network:
+    external: true
+    name: keycloak-dbs-brokers_backend_network
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: keycloak-dbs-brokers_backend_network
+    enable_ipv6: false
+    ipam:
+      driver: default
+      config:
+        - subnet: 237.84.2.178/16
+          gateway: 237.84.2.178
