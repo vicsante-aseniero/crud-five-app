@@ -73,7 +73,7 @@
 	"forwardPorts": [3000, 5432, 5672, 6379, 8080, 9000, 15672],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh",
+	"postCreateCommand": "bash .devcontainer/postCreateCommand.sh && bash .devcontainer/mssql/postCreateCommand.sh 'sqlserver-dev' 'jajnav5@' './api/bin/Debug/' './.devcontainer/mssql/'",
 
 	// Configure tool-specific properties.
 	"customizations": {
