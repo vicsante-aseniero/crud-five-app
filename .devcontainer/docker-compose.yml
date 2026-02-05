@@ -5,6 +5,26 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    
+    # Container name for easy identification
+    container_name: crud-five-app
+
+    # Resource limits for 16GB RAM / Intel i7-1355U workstation
+    # Leaving headroom for host OS and other applications
+    deploy:
+      resources:
+        limits:
+          cpus: '8'
+          memory: 8G
+        reservations:
+          cpus: '2'
+          memory: 2G
+    
+    # Memory swap limit (total memory + swap)
+    memswap_limit: 16G
+    
+    # CPU shares (relative weight)
+    cpu_shares: 1024
 
     volumes:
       - ../..:/workspaces:cached
@@ -16,8 +36,9 @@ services:
     networks: 
       - keycloak-dbs-brokers_backend_network
 
-    # Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-    user: root
+    # Using 'vscode' user instead of 'root' for better security
+    # The devcontainer base image includes a non-root 'vscode' user
+    user: vscode
 
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
